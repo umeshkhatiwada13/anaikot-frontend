@@ -1,24 +1,31 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import Image3 from "../assets/3.jpg";
-import Image4 from "../assets/4.jpg";
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import img1 from "../assets/3.jpg";
+import img2 from "../assets/4.jpg";
 
 const Services = () => {
-    return (
-        <div className='services'>
-            <Carousel>
-                <div>
-                    <img src={Image3} alt="Full Stack" />
-                    <p>Full Stack</p>
-                </div>
-                <div>
-                    <img src={Image4} alt="p2p" />
-                    <p>p2p</p>
-                </div>
-            </Carousel>
+  return (
+    <div>
+      <Carousel
+        infiniteLoop
+        autoPlay
+        showStatus={false}
+        showArrows={false}
+        showThumbs={false}
+        interval={1000}
+      >
+        <div>
+          <img src={img1} alt="Item1" />
+          <p className="legend">Full Stack</p>
         </div>
-    )
-}
+        <div>
+          <img src={img2} alt="Item3" />
+          <p className="legend">Peer-to-peer Support</p>
+        </div>
+      </Carousel>
+    </div>
+  );
+};
 
-export default Services
+export default Services;
