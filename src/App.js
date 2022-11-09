@@ -9,7 +9,6 @@ import "./styles/Header.scss";
 import "./styles/home.scss";
 import "./styles/footer.scss";
 import "./styles/contact.scss";
-import "./styles/mediaquery.scss";
 function App() {
   return (
     <Router>
@@ -17,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path='/service' element={<Services />} />
+        <Route path='/services' element={<Services />} />
       </Routes>
       <Footer />
     </Router>
